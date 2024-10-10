@@ -1,6 +1,6 @@
-import Counter from "./components/Counter";
-import Logo from "./components/Logo";
-import Navigation from "./components/Navigation";
+import Counter from "./_components/Counter";
+import Logo from "./_components/Logo";
+import Navigation from "./_components/Navigation";
 
 export const metadata = { title: "The Wild Oasis" };
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
-        <Counter/>
+        <Counter />
       </body>
     </html>
   );
