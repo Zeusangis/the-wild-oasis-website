@@ -1,4 +1,4 @@
-import { UsersIcon } from "@heroicons/react/24/solid";
+// import { UsersIcon } from "@heroicons/react/24/solid";
 
 function CabinCard({ cabin }) {
   const { id, name, maxCapacity, regularPrice, discount, image } = cabin;
@@ -25,18 +25,18 @@ function CabinCard({ cabin }) {
           </div>
 
           <p className="flex gap-3 justify-end items-baseline">
-            {discount > 0 ? (
-              <>
-                <span className="text-3xl font-[350]">
-                  ${regularPrice - discount}
-                </span>
-                <span className="line-through font-semibold text-primary-600">
-                  ${regularPrice}
-                </span>
-              </>
-            ) : (
-              <span className="text-3xl font-[350]">${regularPrice}</span>
-            )}
+            {discount > 0
+              ? (
+                <>
+                  <span className="text-3xl font-[350]">
+                    ${regularPrice - discount}
+                  </span>
+                  <span className="line-through font-semibold text-primary-600">
+                    ${regularPrice}
+                  </span>
+                </>
+              )
+              : <span className="text-3xl font-[350]">${regularPrice}</span>}
             <span className="text-primary-200">/ night</span>
           </p>
         </div>
